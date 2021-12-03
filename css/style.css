@@ -44,10 +44,43 @@
     float: left;
     padding: 0px 20px;
 }
+.navigation a:last-child{
+    padding-right: 0;
+}
 .navigation a li{
     display: table-cell;
     vertical-align: middle;
     height: 100%;
     color: white;
     font-family: 'roboto';
+    font-size: 16px;
+}
+.navigation button{
+    display: inline-flex;
+    height: 80%;
+    padding: 0;
+    background-color: lightgreen;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'roboto';
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    align-items: center;
+}
+.navigation button:hover{
+    background-color: rgb(204, 255, 204);
+}
+.navigation button:active{
+    background-color: rgb(204, 255, 204);
+}
+.navigation .button__text,
+.navigation .button__icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    height: 100%;
 }
