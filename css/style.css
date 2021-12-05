@@ -9,12 +9,12 @@
     height: 60px;
     display: block;
     background-color: #328C94;
+    text-align: center;
 }
 .inner_header{
-    width: 1000px;
+    max-width: 1280px;
     height: 100%;
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
     background-color: #328C94;
 }
 .logo_container{
@@ -77,21 +77,18 @@
 }
 .navigation .button__text,
 .navigation .button__icon{
-    display: inline-flex;
     align-items: center;
     padding: 0 24px;
-    color: white;
-    height: 100%;
+    color: #000000;
+    font-weight: 900;
 }
-.searchbox{
+.banner-landing{
     background-color: aliceblue;
-    height: 80vh;
+    height: 100vh;
+    background-image: url("/images/Landing.jpg") ;
 }
-.wrapper{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.wrapper-lan{
+
     max-width: 550px;
     width: 100%;
     padding: 15px;
@@ -100,7 +97,7 @@
     justify-content: space-between;
     background: rgba(230, 230, 230, 0.6);
 }
-.wrapper .input{
+.wrapper-lan .input{
     width: 80%;
     padding: 15px 20px;
     border: none;
@@ -141,10 +138,6 @@
     height: 80vh;
 }
 .wrapper-reg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     max-width: 300px;
     width: 100%;
     padding: 15px;
@@ -179,4 +172,20 @@
     font-weight: bold;
 }
 
+.banner-landing__row{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    top: 50%;
+    position: relative;
+}
+.banner-landing__form{
+    width: 100%;
+}
 
+.wrapper-lan_hidden{
+    display: none;
+}
+.option{
+
+}
