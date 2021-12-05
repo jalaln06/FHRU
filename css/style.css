@@ -1,4 +1,6 @@
-
+*{
+    font-family: roboto, sans-serif;
+}
 .header{
     width: 100%;
     height: 60px;
@@ -198,7 +200,7 @@ burger-menu__icon{
     height: 100%;
     color: white;
 }
-.container{
+.log-page{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -258,4 +260,61 @@ burger-menu__icon{
     .burger-menu{
         display: table-cell ;
     }
+}
+.freelance-page__info{
+    display: flex;
+    justify-content: space-between;
+}
+.freelance-page{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    background-color: #26282D;
+    margin: 0 auto;
+}
+.freelance-page__freelance-name{
+    font-size: 64px;
+    background: radial-gradient(#70FF00, #00F0FF);-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin:20px;
+    position: relative;
+}
+.freelance-page__freelance-rating{
+    font-size: 20px;
+    background: radial-gradient(#70FF00, #00F0FF);-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+.box {
+    background: #26282D;
+}
+.freelance-page__item{
+    width: 45%;
+}
+.freelance-page__image{
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 10px;
+    margin: 20px 20px 20px 40%;
+    background: radial-gradient(#70FF00, #00F0FF);
+    border: 3px solid  ;
+    border-image: radial-gradient(#70FF00, #00F0FF);
+}
+.freelance-page__section-header{
+    background: radial-gradient(#70FF00, #00F0FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px;
+}
+.freelance-page__project-name-holder{
+    color:white;
+    margin: 20px;
+}
+.freelance-page__text{
+    color: #C8C8C8;
+    border: 1px solid #C8C8C8;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px;
 }
