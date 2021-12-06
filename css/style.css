@@ -83,7 +83,7 @@ burger-menu__icon{
     color: #000000;
 }
 .navigation a li:hover{
-    background-color: rgb(204, 255, 204);
+    background-color: rgb(0, 0, 0,0.1);
 }
 
 .navigation button:hover{
@@ -317,4 +317,9 @@ burger-menu__icon{
     border-radius: 10px;
     padding: 5px;
     margin: 20px;
+}
+.g-signin2{
+    margin: 10px;
+    max-width: 50px;
+    max-height: 30px;
 }
