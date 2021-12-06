@@ -318,5 +318,12 @@ burger-menu__icon{
     padding: 5px;
     margin: 20px;
 }
-.g-signin2{
+.sup-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 100vh;
+    width: 100vh;
 }
