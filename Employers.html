@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="RU">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FrontHunter</title>
     <meta charset="UTF-8">
@@ -17,11 +18,11 @@
         </div>
         <ul class="navigation">
             <li class="navigation__item" onclick="window.location.href='index.html'">Главная</li>
-            <li class="navigation__item">Фрилансерам</li>
+            <li class="navigation__item" onclick="window.location.href='create_freelancer_profile.html'">Фрилансерам</li>
             <li class="navigation__item" onclick="window.location.href='Employers.html'">Мои Работы</li>
             <li class="navigation__item" onclick="window.location.href='sup.html'">О нас</li>
             <li class="navigation__item navigation__item--with-button">
-                <button type="button" class="button" onclick="window.location.href='regpage.html'">
+                <button class="submit-button" type="button" onclick="window.location.href='regpage.html'">
                     <span class="button__text">Создать профиль</span>
                     <span class="button__icon">
                                 <ion-icon name="create-outline"></ion-icon>
@@ -34,11 +35,11 @@
         </div>
         <ul class="navigation popup-navigation" id="popup-navigation">
             <li class="popup-navigation__item" onclick="window.location.href='index.html'">Главная</li>
-            <li class="popup-navigation__item">Фрилансерам</li>
+            <li class="popup-navigation__item" onclick="window.location.href='create_freelancer_profile.html'">Фрилансерам</li>
             <li class="popup-navigation__item" onclick="window.location.href='Employers.html'">Мои Работы</li>
             <li class="popup-navigation__item" onclick="window.location.href='sup.html'">О нас</li>
             <li class="popup-navigation__item">
-                <button type="button" class="button popup-navigation__button"
+                <button class="submit-button popup-navigation__button"
                         onclick="window.location.href='regpage.html'">
                     <span class="button__text">Создать профиль</span>
                     <span class="button__icon">
@@ -56,13 +57,13 @@
                 <h1 class="freelance-page__freelance-name">Jalal Naghiyev</h1>
                 <h4 class="freelance-page__freelance-rating">(5.0)</h4>
             </div>
-            <div class="freelance-page__item">
+            <div class="freelance-page__item" style="overflow: hidden">
                 <img alt="Моя прекрасная картинка" class="freelance-page__image" src="images/Jalal_Page.jpg">
             </div>
         </div>
         <div class="freelance-page__about">
-            <h1 class="freelance-page__section-header">Про меня</h1>
-            <p class="freelance-page__text">Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
+            <h3 class="freelance-page__section-header">Про меня</h3>
+            <div class="freelance-page__text">Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                 С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
                 гадости вроде такси игрушек и клипов.Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                 С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
@@ -71,11 +72,11 @@
                 гадости вроде такси игрушек и клипов.Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                 С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
                 гадости вроде такси игрушек и клипов.
-            </p>
-            <h1 class="freelance-page__section-header">Мои проекты</h1>
+            </div>
+            <h3 class="freelance-page__section-header">Мои проекты</h3>
             <div class="freelance-page__project-holder">
-                <h2 class="freelance-page__project-name-holder">VK</h2>
-                <p class="freelance-page__text">Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
+                <h4 class="freelance-page__project-name-holder">VK</h4>
+                <div class="freelance-page__text">Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
                     гадости вроде такси игрушек и клипов.Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
@@ -84,9 +85,9 @@
                     гадости вроде такси игрушек и клипов.Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
                     гадости вроде такси игрушек и клипов.
-                </p>
-                <h2 class="freelance-page__project-name-holder">VK</h2>
-                <p class="freelance-page__text">Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
+                </div>
+                <h4 class="freelance-page__project-name-holder">VK</h4>
+                <div class="freelance-page__text">Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
                     гадости вроде такси игрушек и клипов.Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
@@ -95,9 +96,9 @@
                     гадости вроде такси игрушек и клипов.Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
                     гадости вроде такси игрушек и клипов.
-                </p>
-                <h2 class="freelance-page__project-name-holder">VK</h2>
-                <p class="freelance-page__text">Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
+                </div>
+                <h4 class="freelance-page__project-name-holder">VK</h4>
+                <div class="freelance-page__text">Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
                     гадости вроде такси игрушек и клипов.Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
@@ -106,7 +107,7 @@
                     гадости вроде такси игрушек и клипов.Меня зовут Джалал Нагиев. В 12 лет я создал интерфейс вк.
                     С того момента его только ухудшали. Поэтому сейчас там вместо нормального приложения каша из всякой
                     гадости вроде такси игрушек и клипов.
-                </p>
+                </div>
             </div>
         </div>
     </div>

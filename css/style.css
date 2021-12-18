@@ -62,7 +62,7 @@
     padding-top: 0;
 }
 
-.navigation button {
+.submit-button {
     height: 80%;
     padding: 0;
     background-color: lightgreen;
@@ -78,7 +78,7 @@
     margin-top: 5px;
 }
 
-.popup-navigation{
+.popup-navigation {
     z-index: 4;
     list-style-type: none;
     display: none;
@@ -91,12 +91,14 @@
     transition: transform .25s linear;
     opacity: .9;
 }
-.popup-navigation__item{
+
+.popup-navigation__item {
     color: white;
     margin: 20px 0;
     cursor: pointer;
 }
-.popup-navigation__button{
+
+.popup-navigation__button {
     padding: 20px 0;
 }
 
@@ -390,11 +392,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 20px;
+    font-size: 32px;
 }
 
 .freelance-page__project-name-holder {
     color: white;
     margin: 20px;
+    font-size: 28px;
 }
 
 .freelance-page__text {
@@ -415,6 +419,131 @@
     width: 100vh;
 }
 
+/*freelancer profile*/
+.freelancer-profile-container {
+    margin: 0 auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.freelance-surrounding-container {
+    padding: 10px 20px 10px 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.create-freelance-profile__item {
+    display: flex;
+    padding-left: 25px;
+    margin-bottom: 5px;
+}
+
+.create-freelance-profile {
+    margin-top: 10px;
+}
+
+.create-freelance-profile__header {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: black;
+    width: 230px;
+}
+
+.create-freelance-profile__input {
+    height: 30px;
+    max-width: 230px;
+    border: unset;
+    border-radius: 20px;
+    background-color: #F4F4F4;
+}
+
+.create-freelance-profile__item button {
+    padding: 5px;
+    border-radius: 20px;
+    margin: 0 10px 0 auto;
+}
+
+/*freelancer card */
+#freelancer-image {
+    max-width: 230px;
+    max-height: 250px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+    background: radial-gradient(#70FF00, #00F0FF);
+    border: 2px solid;
+    border-image: radial-gradient(#70FF00, #00F0FF);
+}
+
+.freelancer-attributes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.freelancer-info .create-freelance-profile__header {
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.freelancer-info h1 {
+    margin-bottom: 20px;
+}
+
+/*table*/
+#tasks{
+    transition: all .5s ease-in-out;
+}
+
+th, td {
+    margin: .5em 1em;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+th, td:before {
+    color: #dd5;
+}
+
+.tasks--border-gray {
+    border-bottom: 1px solid #C8C8C8;
+}
+
+td .submit-button {
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #15E7A2;
+    margin-bottom: 3px;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.table-surrounding-container {
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 20px 10px 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+#table-generate-data {
+    background-color: #15E7A2;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 3px auto 3px;
+}
+
+
 @media screen and (max-width: 1000px) {
     .navigation {
         display: none;
@@ -423,16 +552,40 @@
     .burger-menu {
         display: table-cell;
     }
-    .popup-navigation{
+
+    .popup-navigation {
         display: block;
     }
-    .navigation{
+
+    .navigation {
         display: none;
     }
-    .burger-menu{
+
+    .burger-menu {
         display: block;
     }
-    .inner_header{
+
+    .inner_header {
         justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .freelance-page__freelance-name {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .freelance-page__info {
+        display: block;
+    }
+
+    .freelance-page__item {
+        width: 100%;
+    }
+
+    .freelance-page__image {
+        margin-left: 20px;
     }
 }
