@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="RU">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FrontHunter</title>
@@ -12,26 +12,41 @@
 <body>
 <div class="header">
     <div class="inner_header">
-        <div class="logo_container">
+        <div class="logo_container" onclick="window.location.href='index.html'">
             <h1> FRONT<span>HUNTER</span></h1>
         </div>
         <ul class="navigation">
-            <a><li onclick="window.location.href='index.html'">Главная</li></a>
-            <a><li>Фрилансерам</li></a>
-            <a><li onclick="window.location.href='Employers.html'">Мои Работы</li></a>
-            <a><li onclick="window.location.href='sup.html'">О нас</li></a>
-            <button type="button" class="button" onclick="window.location.href='regpage.html'">
-                <span class="button__text">Создать профиль</span>
-                <span class="button__icon">
+            <li class="navigation__item" onclick="window.location.href='index.html'">Главная</li>
+            <li class="navigation__item">Фрилансерам</li>
+            <li class="navigation__item" onclick="window.location.href='Employers.html'">Мои Работы</li>
+            <li class="navigation__item" onclick="window.location.href='sup.html'">О нас</li>
+            <li class="navigation__item navigation__item--with-button">
+                <button type="button" class="button" onclick="window.location.href='regpage.html'">
+                    <span class="button__text">Создать профиль</span>
+                    <span class="button__icon">
                                 <ion-icon name="create-outline"></ion-icon>
                             </span>
-            </button>
+                </button>
+            </li>
         </ul>
-        <div class="burger-menu">
-                        <span class="burger-menu__icon">
-                                <ion-icon name="menu-outline" size="large"></ion-icon>
-                            </span>
+        <div class="burger-menu" id="burger-menu">
+            <span class="burger-menu__toggle" id="burger-menu-toggle"></span>
         </div>
+        <ul class="navigation popup-navigation" id="popup-navigation">
+            <li class="popup-navigation__item" onclick="window.location.href='index.html'">Главная</li>
+            <li class="popup-navigation__item">Фрилансерам</li>
+            <li class="popup-navigation__item" onclick="window.location.href='Employers.html'">Мои Работы</li>
+            <li class="popup-navigation__item" onclick="window.location.href='sup.html'">О нас</li>
+            <li class="popup-navigation__item">
+                <button type="button" class="button popup-navigation__button"
+                        onclick="window.location.href='regpage.html'">
+                    <span class="button__text">Создать профиль</span>
+                    <span class="button__icon">
+                                <ion-icon name="create-outline"></ion-icon>
+                            </span>
+                </button>
+            </li>
+        </ul>
     </div>
 </div>
 <div class="box">
@@ -96,6 +111,7 @@
         </div>
     </div>
 </div>
+<script src="js/header.js"></script>
 <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
