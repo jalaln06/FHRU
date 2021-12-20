@@ -15,6 +15,9 @@ for (const elem of elementsToAddValues){
 }
 addAttributeToPage('freelancer-rating', 0)
 imageSource =  localStorage.getItem('imageSource')
-if (imageSource !== undefined){
+if (imageSource !== "undefined"){
     document.getElementById('freelancer-image').setAttribute('src', imageSource)
+}
+else{
+    document.getElementById('freelancer-image').setAttribute('src', "images/gribnoi_sup.png")
 }
