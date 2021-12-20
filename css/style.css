@@ -103,7 +103,7 @@
 }
 
 .navigation__item:hover {
-    background-color: rgb(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .navigation button:hover {
@@ -180,11 +180,13 @@
 }
 
 /* Styles for regpage.html */
+/*noinspection CssUnusedSymbol*/
 .regbox {
     background-color: aliceblue;
     height: 80vh;
 }
 
+/*noinspection CssUnusedSymbol*/
 .form {
     position: relative;
     z-index: 1;
@@ -225,9 +227,6 @@
     display: none;
 }
 
-.option {
-
-}
 
 .burger-menu {
     cursor: pointer;
@@ -249,8 +248,8 @@
     display: block;
     position: relative;
     outline: none;
-    border-top: 2.5px solid;
-    border-bottom: 2.5px solid;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
     margin-top: 10px;
     font-size: 0;
     background: transparent;
@@ -271,10 +270,12 @@
     transition: -webkit-transform .25s ease-in-out;
 }
 
+/*noinspection CssUnusedSymbol*/
 .burger-menu__toggle.is-active:before {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
+/*noinspection CssUnusedSymbol*/
 .burger-menu__toggle.is-active:after {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
     transform: translate(-50%, -50%) rotate(-45deg);
@@ -409,6 +410,7 @@
     margin: 20px;
 }
 
+/*noinspection ALL*/
 .sup-container {
     display: flex;
     flex-direction: column;
