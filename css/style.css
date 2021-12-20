@@ -49,7 +49,7 @@
 .navigation__item {
     height: 100%;
     float: left;
-    padding: 20px 20px 0 20px;
+    padding: 18px 18px 0 18px;
     display: table-cell;
     vertical-align: middle;
     color: white;
@@ -549,16 +549,8 @@ td .submit-button {
         display: none;
     }
 
-    .burger-menu {
-        display: table-cell;
-    }
-
     .popup-navigation {
         display: block;
-    }
-
-    .navigation {
-        display: none;
     }
 
     .burger-menu {
@@ -574,6 +566,21 @@ td .submit-button {
     .freelance-page__freelance-name {
         font-size: 32px;
     }
+    td{
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .freelancer-profile-container{
+        max-width: 318px;
+    }
+    .create-freelance-profile__item{
+        flex-direction: column;
+    }
+    .freelancer-attributes{
+        flex-direction: column-reverse;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -587,5 +594,15 @@ td .submit-button {
 
     .freelance-page__image {
         margin-left: 20px;
+    }
+
+    .wrapper-lan{
+        padding: 10px;
+    }
+    .wrapper-lan .input{
+        padding: 10px 15px;
+    }
+    #freelancer-image-to-upload{
+        width: 280px;
     }
 }

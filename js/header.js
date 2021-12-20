@@ -1,8 +1,13 @@
 const popupButton = document.getElementById('burger-menu')
 const popupToggle = document.getElementById('burger-menu-toggle')
 const popupNavigation = document.getElementById('popup-navigation')
+window.onload = function (){
+    if (window.innerWidth < 1000){
+        popupNavigation.style.display = 'block'
+    }
+}
 window.addEventListener('resize', function (){
-    if (window.innerWidth > 990){
+    if (window.innerWidth > 1000){
         popupNavigation.style.display = 'none'
     }
     else {

@@ -1,6 +1,5 @@
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
-console.log(params)
 
 function addAttributeToPage(elementID, value = undefined){
     const element = document.getElementById(elementID)

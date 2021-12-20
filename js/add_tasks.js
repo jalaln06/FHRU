@@ -20,7 +20,6 @@ generateButton.addEventListener('click', function (e){
                 const index = getRandomInt(0, 9)
                 usedIndexes.push(index)
                 const data = json[index]
-                console.log(data)
                 tr = document.importNode(tr, true)
                 tr.querySelector('#tasks-stack').innerHTML = data["stack"]
                 tr.querySelector('#tasks-payment').innerHTML = data['payment_per_hour']
