@@ -1,2 +1,2 @@
 # FHRU
-Freelance Hunter Project
+Нагиев Джалал М33031
