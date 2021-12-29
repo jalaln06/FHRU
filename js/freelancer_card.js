@@ -19,7 +19,8 @@ for (const elem of elementsToAddValues) {
 }
 addAttributeToPage('freelancer-rating', 0)
 
-imageSource = localStorage.getItem('imageSource')
+let imageSource = localStorage.getItem('imageSource')
+localStorage.removeItem("imageSource")
 
 if (imageSource === "undefined") {
     imageSource = "images/gribnoi_sup.png"
