@@ -2,6 +2,17 @@
     font-family: roboto, sans-serif;
 }
 
+main {
+    overflow: hidden;
+}
+
+.hyperlink, .hyperlink:hover {
+    text-decoration: none;
+    font-family: rorboto, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
 .header {
     width: 100%;
     height: 60px;
@@ -25,6 +36,7 @@
     display: table;
     float: left;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 .logo_container h1 {
@@ -44,44 +56,74 @@
 .navigation {
     height: 100%;
     float: right;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+li {
+    display: table-cell;
 }
 
 .navigation__item {
     height: 100%;
-    float: left;
-    padding: 18px 18px 0 18px;
+    padding: 18px 18px 18px 18px;
     display: table-cell;
     vertical-align: middle;
     color: white;
     font-family: 'roboto', sans-serif;
     font-size: 16px;
-    cursor: pointer;
 }
 
 .navigation__item--with-button {
     padding-top: 0;
+    margin-left: 5px;
 }
 
 .submit-button {
+    cursor: pointer;
     height: 80%;
-    padding: 0;
     background-color: lightgreen;
     border: none;
     outline: none;
     border-radius: 5px;
-    overflow: hidden;
     font-family: 'roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    cursor: pointer;
     align-items: center;
-    margin-top: 5px;
+    padding: 10px 15px 10px 15px;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.error-message {
+    color: darkred;
+    font-weight: 600;
+}
+
+.error-message.not-active {
+    display: none;
+}
+
+.success-message {
+    color: lightgreen;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.success-message.not-active {
+    display: none;
 }
 
 .popup-navigation {
+    padding-inline-start: 0;
     z-index: 4;
     list-style-type: none;
     display: none;
+    vertical-align: center;
     position: fixed;
     top: 60px;
     background-color: #86a072;
@@ -90,23 +132,39 @@
     transform: translate(100%, 0);
     transition: transform .25s linear;
     opacity: .9;
+    overflow: hidden;
 }
 
 .popup-navigation__item {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
     color: white;
-    margin: 20px 0;
-    cursor: pointer;
+    font-family: 'roboto', sans-serif;
+    font-size: 16px;
+}
+
+.popup-navigation__item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .popup-navigation__button {
-    padding: 20px 0;
+    padding: 10px 10px 20px 10px;
 }
 
 .navigation__item:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+.navigation__item.active{
+    background-color: #26282D
+}
+.popup-navigation__item.active{
+    background-color: #26282D;
+}
 
-.navigation button:hover {
+.submit-button:hover {
     background-color: rgb(204, 255, 204);
 }
 
@@ -254,6 +312,14 @@
     font-size: 0;
     background: transparent;
     margin-left: 7px;
+}
+
+.burger-menu__toggle.is-active {
+    border: 0;
+}
+
+.popup-navigation.is-active {
+    transform: none;
 }
 
 .burger-menu__toggle:before, .burger-menu__toggle:after {
@@ -432,11 +498,16 @@
     height: 100vh;
 }
 
+.freelancer-profile-container--freelancer-card {
+    height: 110vh;
+}
+
 .freelance-surrounding-container {
     padding: 10px 20px 10px 10px;
     border-radius: 20px;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
 }
+
 
 .create-freelance-profile__item {
     display: flex;
@@ -456,6 +527,12 @@
     width: 230px;
 }
 
+.already-exists-label {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
 .create-freelance-profile__input {
     height: 30px;
     max-width: 230px;
@@ -464,10 +541,32 @@
     background-color: #F4F4F4;
 }
 
+.create-freelance-profile__input:invalid {
+    border: 1px solid darkred;
+}
+
+.create-freelance-profile__input:focus {
+    outline: none;
+}
+
 .create-freelance-profile__item button {
     padding: 5px;
     border-radius: 20px;
     margin: 0 10px 0 auto;
+}
+
+.freelance-profile-already-exists .submit-button {
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.freelance-profile-already-exists {
+    margin-left: 20px;
+}
+
+.freelance-profile-already-exists.not-active {
+    display: none;
 }
 
 /*freelancer card */
@@ -497,8 +596,11 @@
 }
 
 /*table*/
-#tasks{
+#tasks {
     transition: all .5s ease-in-out;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
 }
 
 th, td {
@@ -525,17 +627,16 @@ td .submit-button {
 .table-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
 }
 
 .table-surrounding-container {
-    margin-top: 10px;
+    margin: 10px auto;
     text-align: center;
     padding: 10px 20px 10px 10px;
     border-radius: 20px;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
 }
 
 #table-generate-data {
@@ -545,6 +646,54 @@ td .submit-button {
     margin: 3px auto 3px;
 }
 
+/*freelancer-list*/
+.freelancer-list-container {
+    margin: 20px 100px;
+}
+
+.freelancer-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #328C94;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.freelancer-list__header {
+    font-size: 16px;
+    color: #646668;
+    font-weight: 300;
+}
+
+.freelancer-list__text {
+    font-family: "Overpass Mono", Consolas, monospace;
+    color: #e83e8c;
+    font-size: 20px;
+}
+
+.freelancer-list__name {
+    font-family: "Overpass Mono", Consolas, monospace;
+    color: #328C94;
+    font-size: 22px;
+}
+
+.freelancer-list__image {
+    max-width: 230px;
+    max-height: 250px;
+    border-radius: 10px;
+    background: radial-gradient(#70FF00, #00F0FF);
+    border: 2px solid;
+    border-image: radial-gradient(#70FF00, #00F0FF);
+}
+
+.freelancer-list__info {
+    padding-left: 10px;
+}
+
+.freelancer-list__image-container {
+    padding: 10px;
+}
 
 @media screen and (max-width: 1000px) {
     .navigation {
@@ -552,7 +701,8 @@ td .submit-button {
     }
 
     .popup-navigation {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     .burger-menu {
@@ -568,21 +718,33 @@ td .submit-button {
     .freelance-page__freelance-name {
         font-size: 32px;
     }
-    td{
+
+    td {
         padding: 0 10px;
+    }
+
+    .freelancer-list-container {
+        margin: 10px 50px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .freelancer-profile-container{
+    .freelancer-profile-container--freelancer-card {
+        height: auto;
+    }
+
+    .freelancer-profile-container {
         max-width: 318px;
     }
-    .create-freelance-profile__item{
+
+    .create-freelance-profile__item {
         flex-direction: column;
     }
-    .freelancer-attributes{
+
+    .freelancer-attributes {
         flex-direction: column-reverse;
     }
+
 }
 
 @media screen and (max-width: 550px) {
@@ -598,13 +760,28 @@ td .submit-button {
         margin-left: 20px;
     }
 
-    .wrapper-lan{
+    .wrapper-lan {
         padding: 10px;
     }
-    .wrapper-lan .input{
+
+    .wrapper-lan .input {
         padding: 10px 15px;
     }
-    #freelancer-image-to-upload{
+
+    #freelancer-image-to-upload {
         width: 280px;
+    }
+    .freelancer-list-container {
+        margin: 10px;
+    }
+    .freelancer-list__item{
+        flex-direction: column;
+        vertical-align: center;
+        text-align: center;
+    }
+
+    /*table*/
+    .table-container {
+       display: block;
     }
 }
