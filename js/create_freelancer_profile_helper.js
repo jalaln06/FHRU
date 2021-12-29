@@ -16,6 +16,6 @@ fileInput.addEventListener('change', function () {
     }
 }, false)
 
-document.getElementsByClassName('create-freelance-profile')[0].addEventListener('submit', function () {
+document.getElementsByClassName('create-freelance-profile')[0].addEventListener('submit', function (){
     localStorage.setItem('imageSource', imageSource)
 })

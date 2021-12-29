@@ -13,39 +13,43 @@
 <body>
 <div class="header">
     <div class="inner_header">
-        <div class="logo_container" onclick="window.location.href='index.html'">
+        <a class="logo_container hyperlink" href="index.html">
             <h1> FRONT<span>HUNTER</span></h1>
-        </div>
+        </a>
         <ul class="navigation">
-            <li class="navigation__item" onclick="window.location.href='index.html'">Главная</li>
-            <li class="navigation__item" onclick="window.location.href='create_freelancer_profile.html'">Фрилансерам</li>
-            <li class="navigation__item" onclick="window.location.href='Employers.html'">Мои Работы</li>
-            <li class="navigation__item" onclick="window.location.href='tasks_to_do_available.html'">Заявки</li>
-            <li class="navigation__item navigation__item--with-button">
-                <button class="submit-button" type="button" onclick="window.location.href='regpage.html'">
+            <li><a class="hyperlink navigation__item" href="create_freelancer_profile.html">Фрилансерам</a></li>
+            <li><a class="hyperlink navigation__item" href="Employers.html">Мои Работы</a></li>
+            <li><a class="hyperlink navigation__item" href="freelancer_list.html">Фрилансеры</a></li>
+            <li><a class="hyperlink navigation__item" href="tasks_to_do_available.html">Заявки</a></li>
+            <li class="navigation__item--with-button"><a href="regpage.html">
+                <button class="submit-button" type="button">
                     <span class="button__text">Создать профиль</span>
                     <span class="button__icon">
                                 <ion-icon name="create-outline"></ion-icon>
                             </span>
                 </button>
+            </a>
             </li>
         </ul>
         <div class="burger-menu" id="burger-menu">
             <span class="burger-menu__toggle" id="burger-menu-toggle"></span>
         </div>
-        <ul class="navigation popup-navigation" id="popup-navigation">
-            <li class="popup-navigation__item" onclick="window.location.href='index.html'">Главная</li>
-            <li class="popup-navigation__item" onclick="window.location.href='create_freelancer_profile.html'">Фрилансерам</li>
-            <li class="popup-navigation__item" onclick="window.location.href='Employers.html'">Мои Работы</li>
-            <li class="popup-navigation__item" onclick="window.location.href='tasks_to_do_available.html'">Заявки</li>
-            <li class="popup-navigation__item">
-                <button class="submit-button popup-navigation__button"
-                        onclick="window.location.href='regpage.html'">
-                    <span class="button__text">Создать профиль</span>
-                    <span class="button__icon">
+        <ul class="popup-navigation" id="popup-navigation">
+            <li><a href="index.html" class="popup-navigation__item hyperlink">Главная</a></li>
+            <li><a href="create_freelancer_profile.html"
+                   class="popup-navigation__item hyperlink">Фрилансерам</a></li>
+            <li><a href="Employers.html" class="hyperlink popup-navigation__item">Мои Работы</a></li>
+            <li><a href="freelancer_list.html" class="hyperlink popup-navigation__item">Фрилансеры</a></li>
+            <li><a href="tasks_to_do_available.html" class="popup-navigation__item hyperlink">Заявки</a></li>
+            <li>
+                <a class="hyperlink" href="regpage.html">
+                    <button class="submit-button popup-navigation__button">
+                        <span class="button__text">Создать профиль</span>
+                        <span class="button__icon">
                                 <ion-icon name="create-outline"></ion-icon>
                             </span>
-                </button>
+                    </button>
+                </a>
             </li>
         </ul>
     </div>
@@ -58,8 +62,7 @@
             <input id="reg-page-user-email" name="reg-page-user-email" type="email" placeholder="Введите ваш эмайл"
                    required>`
         </div>
-        <button class="log-page__button" type="submit" onclick="window.location.href='success.html'">Регистрация
-        </button>
+        <button class="log-page__button" type="submit">Регистрация</button>
     </form>
 </div>
 <script src="js/header.js"></script>

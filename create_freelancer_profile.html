@@ -13,39 +13,43 @@
 <body>
 <div class="header">
     <div class="inner_header">
-        <div class="logo_container" onclick="window.location.href='index.html'">
+        <a class="logo_container hyperlink" href="index.html">
             <h1> FRONT<span>HUNTER</span></h1>
-        </div>
+        </a>
         <ul class="navigation">
-            <li class="navigation__item" onclick="window.location.href='index.html'">Главная</li>
-            <li class="navigation__item" onclick="window.location.href='create_freelancer_profile.html'">Фрилансерам</li>
-            <li class="navigation__item" onclick="window.location.href='Employers.html'">Мои Работы</li>
-            <li class="navigation__item" onclick="window.location.href='tasks_to_do_available.html'">Заявки</li>
-            <li class="navigation__item navigation__item--with-button">
-                <button class="submit-button" type="button" onclick="window.location.href='regpage.html'">
+            <li><a href="create_freelancer_profile.html" class="hyperlink navigation__item active">Фрилансерам</a></li>
+            <li><a class="hyperlink navigation__item" href="Employers.html">Мои Работы</a></li>
+            <li><a class="hyperlink navigation__item" href="freelancer_list.html">Фрилансеры</a></li>
+            <li><a class="hyperlink navigation__item" href="tasks_to_do_available.html">Заявки</a></li>
+            <li class="navigation__item--with-button"><a href="regpage.html">
+                <button class="submit-button" type="button">
                     <span class="button__text">Создать профиль</span>
                     <span class="button__icon">
                                 <ion-icon name="create-outline"></ion-icon>
                             </span>
                 </button>
+            </a>
             </li>
         </ul>
         <div class="burger-menu" id="burger-menu">
             <span class="burger-menu__toggle" id="burger-menu-toggle"></span>
         </div>
-        <ul class="navigation popup-navigation" id="popup-navigation">
-            <li class="popup-navigation__item" onclick="window.location.href='index.html'">Главная</li>
-            <li class="popup-navigation__item" onclick="window.location.href='create_freelancer_profile.html'">Фрилансерам</li>
-            <li class="popup-navigation__item" onclick="window.location.href='Employers.html'">Мои Работы</li>
-            <li class="popup-navigation__item" onclick="window.location.href='tasks_to_do_available.html'">Заявки</li>
-            <li class="popup-navigation__item">
-                <button class="submit-button popup-navigation__button"
-                        onclick="window.location.href='regpage.html'">
-                    <span class="button__text">Создать профиль</span>
-                    <span class="button__icon">
+        <ul class="popup-navigation" id="popup-navigation">
+            <li><a href="index.html" class="popup-navigation__item hyperlink">Главная</a></li>
+            <li><a href="create_freelancer_profile.html"
+                   class="popup-navigation__item hyperlink active">Фрилансерам</a></li>
+            <li><a href="Employers.html" class="hyperlink popup-navigation__item">Мои Работы</a></li>
+            <li><a href="freelancer_list.html" class="hyperlink popup-navigation__item">Фрилансеры</a></li>
+            <li><a href="tasks_to_do_available.html" class="popup-navigation__item hyperlink">Заявки</a></li>
+            <li>
+                <a class="hyperlink" href="regpage.html">
+                    <button class="submit-button popup-navigation__button">
+                        <span class="button__text">Создать профиль</span>
+                        <span class="button__icon">
                                 <ion-icon name="create-outline"></ion-icon>
                             </span>
-                </button>
+                    </button>
+                </a>
             </li>
         </ul>
     </div>
@@ -56,28 +60,33 @@
             <h1>Заполнить данные</h1>
             <form action="freelancer_card.html" class="create-freelance-profile">
                 <div class="create-freelance-profile__item">
-                    <div class="create-freelance-profile__header">Имя</div>
-                    <label for="freelancer-name"></label>
-                    <input type="text" class="create-freelance-profile__input" id="freelancer-name" name="freelancer-name" required />
+                    <label for="freelancer-nickname" class="create-freelance-profile__header">Никнейм</label>
+                    <input pattern="^[a-zA-Z0-9]+$" type="text" class="create-freelance-profile__input"
+                           id="freelancer-nickname"
+                           title="Only english letters and numbers" name="freelancer-nickname" required/>
                 </div>
                 <div class="create-freelance-profile__item">
-                    <div class="create-freelance-profile__header">Фамилия</div>
-                    <label for="freelancer-surname"></label>
-                    <input type="text" class="create-freelance-profile__input" id="freelancer-surname" name="freelancer-surname" required />
+                    <label for="freelancer-name" class="create-freelance-profile__header">Имя</label>
+                    <input type="text" class="create-freelance-profile__input" id="freelancer-name"
+                           name="freelancer-name" required/>
                 </div>
                 <div class="create-freelance-profile__item">
-                    <div class="create-freelance-profile__header">Долларов в час</div>
-                    <label for="freelancer-payment"></label>
-                    <input min="1" type="number" class="create-freelance-profile__input" id="freelancer-payment" name="freelancer-payment" required />
+                    <label for="freelancer-surname" class="create-freelance-profile__header">Фамилия</label>
+                    <input type="text" class="create-freelance-profile__input" id="freelancer-surname"
+                           name="freelancer-surname" required/>
                 </div>
                 <div class="create-freelance-profile__item">
-                    <div class="create-freelance-profile__header">Стек</div>
-                    <label for="freelancer-stack"></label>
-                    <input type="text" class="create-freelance-profile__input" id="freelancer-stack" name="freelancer-stack" required />
+                    <label for="freelancer-payment" class="create-freelance-profile__header">Долларов в час</label>
+                    <input min="1" type="number" class="create-freelance-profile__input" id="freelancer-payment"
+                           name="freelancer-payment" required/>
                 </div>
                 <div class="create-freelance-profile__item">
-                    <div class="create-freelance-profile__header">Загрузить свое фото</div>
-                    <label for="freelancer-image-to-upload"></label>
+                    <label for="freelancer-stack" class="create-freelance-profile__header">Стек</label>
+                    <input type="text" class="create-freelance-profile__input" id="freelancer-stack"
+                           name="freelancer-stack" required/>
+                </div>
+                <div class="create-freelance-profile__item">
+                    <label for="freelancer-image-to-upload" class="create-freelance-profile__header">Загрузить свое фото</label>
                     <input type="file" accept="image/png, image/gif, image/jpeg" id="freelancer-image-to-upload"/>
                 </div>
                 <div class="create-freelance-profile__item">

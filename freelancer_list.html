@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="RU">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -19,8 +19,8 @@
         <ul class="navigation">
             <li><a class="hyperlink navigation__item" href="create_freelancer_profile.html">Фрилансерам</a></li>
             <li><a class="hyperlink navigation__item" href="Employers.html">Мои Работы</a></li>
-            <li><a class="hyperlink navigation__item" href="freelancer_list.html">Фрилансеры</a></li>
-            <li><a class="hyperlink navigation__item active" href="tasks_to_do_available.html">Заявки</a></li>
+            <li><a class="hyperlink navigation__item active" href="freelancer_list.html">Фрилансеры</a></li>
+            <li><a class="hyperlink navigation__item" href="tasks_to_do_available.html">Заявки</a></li>
             <li class="navigation__item--with-button"><a href="regpage.html">
                 <button class="submit-button" type="button">
                     <span class="button__text">Создать профиль</span>
@@ -39,8 +39,8 @@
             <li><a href="create_freelancer_profile.html"
                    class="popup-navigation__item hyperlink">Фрилансерам</a></li>
             <li><a href="Employers.html" class="hyperlink popup-navigation__item">Мои Работы</a></li>
-            <li><a href="freelancer_list.html" class="hyperlink popup-navigation__item">Фрилансеры</a></li>
-            <li><a href="tasks_to_do_available.html" class="popup-navigation__item hyperlink active">Заявки</a></li>
+            <li><a href="freelancer_list.html" class="hyperlink popup-navigation__item active">Фрилансеры</a></li>
+            <li><a href="tasks_to_do_available.html" class="popup-navigation__item hyperlink">Заявки</a></li>
             <li>
                 <a class="hyperlink" href="regpage.html">
                     <button class="submit-button popup-navigation__button">
@@ -54,36 +54,47 @@
         </ul>
     </div>
 </div>
-<div class="table-container">
-    <div class="table-surrounding-container">
-        <table id="tasks">
-            <tr class="tasks--border-gray">
-                <td>Стэк</td>
-                <td>Долларов в час</td>
-                <td>Часов работы</td>
-                <td>Желаемый рейтинг</td>
-            </tr>
-            <template id="table-template">
-                <tr>
-                    <td id="tasks-stack"></td>
-                    <td id="tasks-payment"></td>
-                    <td id="tasks-hours-to-work"></td>
-                    <td id="tasks-rating-wanted"></td>
-                    <td>
-                        <button class="submit-button">Откликнутся</button>
-                    </td>
-                </tr>
+<main>
+    <div class="freelancer-list-container">
+        <div class="freelance-surrounding-container" id="freelancer-list-container">
+            <div class="freelancer-list__item">
+                <div class="freelancer-list__info">
+                    <div class="freelancer-list__name">Jalal06</div>
+                    <div class="freelancer-list__text" datatype="name-surname">Nagiev Jalal</div>
+                    <h3 class="freelancer-list__header">Стэк</h3>
+                    <div class="freelancer-list__text" datatype="stack">Vue</div>
+                    <h3 class="freelancer-list__header">Долларов в час</h3>
+                    <div class="freelancer-list__text" datatype="payment">12</div>
+                    <h3 class="freelancer-list__header">Рейтинг</h3>
+                    <div class="freelancer-list__text" datatype="rating">5</div>
+                </div>
+                <div class="freelancer-list__image-container">
+                    <img class="freelancer-list__image" src="images/Jalal_Page.jpg" alt="img-preview">
+                </div>
+            </div>
+            <template id="freelancer-list-item">
+                <div class="freelancer-list__item">
+                    <div class="freelancer-list__info">
+                        <div class="freelancer-list__name"></div>
+                        <div class="freelancer-list__text" datatype="name_surname"></div>
+                        <h3 class="freelancer-list__header">Стэк</h3>
+                        <div class="freelancer-list__text" datatype="stack"></div>
+                        <h3 class="freelancer-list__header">Долларов в час</h3>
+                        <div class="freelancer-list__text" datatype="payment"></div>
+                        <h3 class="freelancer-list__header">Рейтинг</h3>
+                        <div class="freelancer-list__text" datatype="rating"></div>
+                    </div>
+                    <div class="freelancer-list__image-container">
+                        <img class="freelancer-list__image" src="images/Jalal_Page.jpg" alt="img-preview">
+                    </div>
+                </div>
             </template>
-        </table>
-        <div class="error-message not-active" id="todo-error-message">⚠Что-то пошло не так, проверьте подключение к
-            интернету
         </div>
-        <button class="submit-button" id="table-generate-data">сгенерировать</button>
     </div>
-</div>
+</main>
+<script src="/js/freelancer_list.js"></script>
+<script src="js/header.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="js/add_tasks.js"></script>
-<script src="js/header.js"></script>
 </body>
 </html>
