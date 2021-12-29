@@ -61,18 +61,18 @@
             <form action="freelancer_card.html" class="create-freelance-profile">
                 <div class="create-freelance-profile__item">
                     <label for="freelancer-nickname" class="create-freelance-profile__header">Никнейм</label>
-                    <input pattern="^[a-zA-Z0-9]+$" type="text" class="create-freelance-profile__input"
+                    <input minlength ="3" pattern="^[a-zA-Z0-9]+$" type="text" class="create-freelance-profile__input"
                            id="freelancer-nickname"
                            title="Only english letters and numbers" name="freelancer-nickname" required/>
                 </div>
                 <div class="create-freelance-profile__item">
                     <label for="freelancer-name" class="create-freelance-profile__header">Имя</label>
-                    <input type="text" class="create-freelance-profile__input" id="freelancer-name"
+                    <input minlength ="2" type="text" class="create-freelance-profile__input" id="freelancer-name"
                            name="freelancer-name" required/>
                 </div>
                 <div class="create-freelance-profile__item">
                     <label for="freelancer-surname" class="create-freelance-profile__header">Фамилия</label>
-                    <input type="text" class="create-freelance-profile__input" id="freelancer-surname"
+                    <input minlength ="2" type="text" class="create-freelance-profile__input" id="freelancer-surname"
                            name="freelancer-surname" required/>
                 </div>
                 <div class="create-freelance-profile__item">
