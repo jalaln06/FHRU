@@ -12,7 +12,7 @@ if (data !== undefined) {
             valueHolder.innerHTML = data[username][attributeName]
         }
         freelancerCard.getElementsByClassName('freelancer-list__image')[0].setAttribute('src', data[username]['image'])
-        freelancerCard.getElementsByClassName('freelancer-list__name')[0].innerHTML =  username
+        freelancerCard.getElementsByClassName('freelancer-list__name')[0].innerHTML = username
         templateContainer.prepend(freelancerCard)
     }
 }

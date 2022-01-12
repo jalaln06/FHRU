@@ -654,16 +654,17 @@ td .submit-button {
 .freelancer-list__item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border: 1px solid #328C94;
     border-radius: 10px;
     margin-bottom: 5px;
+    align-items: flex-start;
 }
 
 .freelancer-list__header {
     font-size: 16px;
     color: #646668;
     font-weight: 300;
+    padding-right: 5px;
 }
 
 .freelancer-list__text {
@@ -694,6 +695,10 @@ td .submit-button {
 .freelancer-list__image-container {
     padding: 10px;
 }
+.freelancer-list__info__item{
+    display: flex;
+    align-items: baseline;
+}
 
 @media screen and (max-width: 1000px) {
     .navigation {
@@ -721,6 +726,9 @@ td .submit-button {
 
     td {
         padding: 0 10px;
+    }
+    .table-surrounding-container{
+        margin: 5px;
     }
 
     .freelancer-list-container {
@@ -778,6 +786,7 @@ td .submit-button {
         flex-direction: column;
         vertical-align: center;
         text-align: center;
+        align-items: center;
     }
 
     /*table*/
